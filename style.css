@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: darkgray;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 0rem; */
+    line-height: 1.5;
+}
+.box img{
+    margin: .5rem 0;
+}
+
+.container-card{
+    border: 1px solid;
+    padding: 1.2rem;
+    width: 30rem;
+    background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 1rem; */
+    gap: 1rem;
+}
+.search input{
+    border-radius: 16px;
+    padding: .5rem .7rem;
+}
+.search button{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.location svg{
+    font-size: 1.6rem;
+}
+
+.weather{
+    padding: 0.7rem 0;
+    border: 1px solid;
+
+}
+.weather-description{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.weather h2{
+    
+}
+.weather img{
+    width: 5rem;
+    height: 5rem;
+}
+.weather-temp span{
+    font-size: 4rem;
+}
+
+.sunrise-sunset{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+    padding: 0.7rem 0;
+}
+
+.weather-others{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+    padding: 0.7rem 0;
+}

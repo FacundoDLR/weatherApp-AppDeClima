@@ -5,24 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container-card">
+
         <div class="search">
             <input type="text" class="search-bar" placeholder="Ingresa tu ciudad">
             <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M11 2c4.968 0 9 4.032 9 9s-4.032 9-9 9-9-4.032-9-9 4.032-9 9-9zm0 16c3.867 0 7-3.133 7-7 0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7zm8.485.071l2.829 2.828-1.415 1.415-2.828-2.829 1.414-1.414z"></path></g></svg></button>
         </div>
+
         <div class="weather">
-            <h2>Clima en San Juan</h2>
-            <img src="" alt="">
-            <span>34° C</span>
-            <p>Soleado</p>
+            <div class="location">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#000" stroke-width="2" d="M12,22 C12,22 4,16 4,10 C4,5 8,2 12,2 C16,2 20,5 20,10 C20,16 12,22 12,22 Z M12,13 C13.657,13 15,11.657 15,10 C15,8.343 13.657,7 12,7 C10.343,7 9,8.343 9,10 C9,11.657 10.343,13 12,13 L12,13 Z"></path></svg>
+                <h2>San Juan</h2>
+            </div>
+            <div class="weather-description">
+                <img src="./weather-icons/sun_sunny_weather_icon.svg" alt="">
+                <div class="weather-temp">
+                    <span>34° C</span>
+                    <p>Soleado</p>
+                </div>
+
+            </div>
         </div>
-        <div class="weather-description">
-            <p>Humedad: 23%</p>
-            <p>Viento: 23 Km/h</p>
+
+        <div class="sunrise-sunset">
+            <div class="box sunrise">
+                <p>Salida del sol</p>
+                <p>06:34</p>
+                <img src="./weather-icons/horizont_morning_sun_sunrise_weather_icon.svg" alt="">
+            </div>
+            <div class="box sunset">
+                <p>Atardecer</p>
+                <p>20:43</p>
+                <img src="./weather-icons/evening_horizon_sun_sundown_sunset_icon.svg" alt="">
+            </div>
         </div>
+
+        <div class="weather-others">
+            <div class="box weather-uv">
+                <img src="./weather-icons/light_radiation_rays_sun_ultraviolet_icon.svg" alt="">
+                <p>Indice UV</p>
+                <p>Bajo</p>
+            </div>
+            <div class="box weather-humidity">
+                <img src="./weather-icons/drop_high_humidity_percentage_precipitation_icon.svg" alt="">
+                <p>Humedad</p>
+                <p>23%</p>
+            </div>
+            <div class="box weather-wind">
+                <img src="./weather-icons/breeze_fast_speed_weather_wind_icon.svg" alt="">
+                <p>Viento</p>
+                <p>23 Km/h</p>
+            </div>
+        </div>
+
     </div>
     
 </body>
