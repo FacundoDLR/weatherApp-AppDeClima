@@ -5,11 +5,13 @@
 }
 
 body{
-    background-color: darkgray;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
     display: grid;
     place-items: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: #fefefe;
 }
 
 img{
@@ -28,18 +30,22 @@ img{
 .box img{
     margin: .5rem 0;
 }
+.box span{
+    color: #888888;
+}
 
 .container-card{
-    border: 1px solid;
     padding: 1.2rem;
     width: 30rem;
-    background-color: lightseagreen;
+    background-color: hsl(0, 0%, 17%, 95%);
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    
+    border-radius: 18px;
+    box-shadow: 0px 10px 15px 7px rgba(0,0,0,0.1);
 }
 
+/***************************** SEARCH SECTION  *****************************/
 .search{
     display: flex;
     justify-content: center;
@@ -50,35 +56,68 @@ img{
 .search input{
     border-radius: 16px;
     padding: .5rem .7rem;
+    border: none;
+    width: 17rem;
+    background-color: #414141;
+    color: #888888;
+}
+.search input:hover{
+    opacity: .8;
+}
+.search input:focus{
+    border-color: dodgerBlue;
+	box-shadow: 0 0 8px 0 dodgerBlue;
+    outline: none;
 }
 .search button{
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 50%;
-}
-
-.location{
+    border: none;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+    background-color: #414141;
+    
 }
-.location svg{
-    font-size: 1.6rem;
+.search button:hover{
+    opacity: .8;
+}
+.search button:active{
+    scale: .9;
+}
+.search button svg{
+    font-size: 1.1rem;
 }
 
+/***************************** WEATHER SECTION  *****************************/
 .weather{
     padding: 0.7rem 0;
-    border: 1px solid;
-
+    
+}
+.location{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.location-title{
+    display: flex;
+}
+.location-title svg{
+    font-size: 1.1rem;
+    margin-right: .4rem;
+}
+.location-time p{
+    font-style: italic;
+    color: #888888;
 }
 .weather-description{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.weather h2{
-    
-}
+
 .weather img{
     width: 5rem;
     height: 5rem;
@@ -86,17 +125,28 @@ img{
 .weather-temp span{
     font-size: 4rem;
 }
+.weather-temp p{
+    text-align: end;
+    padding-right: 0.4rem;
+}
 
+/***************************** SUNRISE-SUNSET SECTION  *****************************/
 .sunrise-sunset{
     display: flex;
     justify-content: space-around;
-    border: 1px solid;
+    /* border: 1px solid; */
     padding: 0.7rem 0;
+    border-radius: 45px;
+    background-color: hsl(90, 2%, 21%, 90%);
+    box-shadow: 0px 10px 15px 7px rgba(0,0,0,0.1);
 }
 
+/***************************** OTHERS SECTION  *****************************/
 .weather-others{
     display: flex;
     justify-content: space-around;
-    border: 1px solid;
+    /* border: 1px solid; */
     padding: 0.7rem 0;
+    border-radius: 45px;
+    background-color: hsl(90, 2%, 21%, 90%);
 }
