@@ -41,11 +41,11 @@ let weather = {
         document.querySelector("#timeDHour").innerHTML = str + "hs";
         document.querySelector("#tempDescription").innerText = `${description}`;
 
-        document.querySelector("#sunriseHour").innerText = `${sriseHour}`;
-        document.querySelector("#sunsetHour").innerText = `${ssetHour}`;
+        // document.querySelector("#sunriseHour").innerText = `${sriseHour}`;
+        // document.querySelector("#sunsetHour").innerText = `${ssetHour}`;
 
-        document.querySelector("#humidity").innerText = `${humidity} %`;
-        document.querySelector("#windSpeed").innerText = Math.floor(speed)` Km/h`;
+        document.querySelector("#humidity").innerHTML = `${humidity} %`;
+        document.querySelector("#windSpeed").innerHTML = Math.floor(speed) + " Km/h";
         document.querySelector(".containerWeather").classList.toggle("loading");
     },
     // Obtencion del valor introducido en el campo del input
