@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
 
+    <link rel="icon" type="image/x-icon" href="/weather-icons/sun.png">
+
     <link rel="stylesheet" href="style.css">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
@@ -15,63 +17,68 @@
     <div class="container-card">
 
         <div class="search">
-            <input type="text" class="search-bar" placeholder="Ingresa tu ciudad">
-            <button><svg stroke="currentColor" fill="#FFF" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M11 2c4.968 0 9 4.032 9 9s-4.032 9-9 9-9-4.032-9-9 4.032-9 9-9zm0 16c3.867 0 7-3.133 7-7 0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7zm8.485.071l2.829 2.828-1.415 1.415-2.828-2.829 1.414-1.414z"></path></g></svg></button>
+            <input id="search-bar" type="text" class="search-bar" placeholder="Ingresa tu ciudad">
+            <button id="search-button"><svg stroke="currentColor" fill="#FFF" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M11 2c4.968 0 9 4.032 9 9s-4.032 9-9 9-9-4.032-9-9 4.032-9 9-9zm0 16c3.867 0 7-3.133 7-7 0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7zm8.485.071l2.829 2.828-1.415 1.415-2.828-2.829 1.414-1.414z"></path></g></svg></button>
         </div>
 
-        <div class="weather">
-            <div class="location">
-                <div class="location-title">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#FFF" stroke-width="2" d="M12,22 C12,22 4,16 4,10 C4,5 8,2 12,2 C16,2 20,5 20,10 C20,16 12,22 12,22 Z M12,13 C13.657,13 15,11.657 15,10 C15,8.343 13.657,7 12,7 C10.343,7 9,8.343 9,10 C9,11.657 10.343,13 12,13 L12,13 Z"></path></svg>
-                    <h4 id="city">San Juan</h4>
+        <div class="containerWeather">
+
+            <div class="weather">
+                <div class="location">
+                    <div class="location-title">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#FFF" stroke-width="2" d="M12,22 C12,22 4,16 4,10 C4,5 8,2 12,2 C16,2 20,5 20,10 C20,16 12,22 12,22 Z M12,13 C13.657,13 15,11.657 15,10 C15,8.343 13.657,7 12,7 C10.343,7 9,8.343 9,10 C9,11.657 10.343,13 12,13 L12,13 Z"></path></svg>
+                        <h4 id="city">--</h4>
+                    </div>
+                    <div class="location-time">
+                        <p id="timeDHour">DD, HH:MM</p>
+                    </div>
+    
                 </div>
-                <div class="location-time">
-                    <p id="timeDHour">Mie, 20:54hs</p>
+                <div class="weather-description">
+                    <img id="iconWeather" src="./weather-icons/sun_sunny_weather_icon.svg" alt="">
+                    <div class="weather-temp">
+                        <span id="tempNow">-- °C</span>
+                        <p id="tempDescription">--</p>
+                    </div>
+    
                 </div>
-
             </div>
-            <div class="weather-description">
-                <img id="iconWeather" src="./weather-icons/sun_sunny_weather_icon.svg" alt="">
-                <div class="weather-temp">
-                    <span id="tempNow">34° C</span>
-                    <p id="tempDescription">Soleado</p>
+    
+            <!-- <div class="sunrise-sunset">
+                <div class="box sunrise">
+                    <p>Salida del sol</p>
+                    <span id="sunriseHour">06:34</span>
+                    <img src="./weather-icons/horizont_morning_sun_sunrise_weather_icon.svg" alt="">
                 </div>
-
+                <div class="box sunset">
+                    <p>Atardecer</p>
+                    <span id="sunsetHour">20:43</span>
+                    <img src="./weather-icons/evening_horizon_sun_sundown_sunset_icon.svg" alt="">
+                </div>
+            </div> -->
+    
+            <div class="weather-others">
+                <!-- <div class="box weather-uv">
+                    <img src="./weather-icons/light_radiation_rays_sun_ultraviolet_icon.svg" alt="">
+                    <p>Indice UV</p>
+                    <span id="UVIndex">Bajo</span>
+                </div> -->
+                <div class="box weather-humidity">
+                    <img src="./weather-icons/drop_high_humidity_percentage_precipitation_icon.svg" alt="">
+                    <p>Humedad</p>
+                    <span id="humidity">--</span>
+                </div>
+                <div class="box weather-wind">
+                    <img src="./weather-icons/breeze_fast_speed_weather_wind_icon.svg" alt="">
+                    <p>Viento</p>
+                    <span id="windSpeed">--</span>
+                </div>
             </div>
+
         </div>
 
-        <div class="sunrise-sunset">
-            <div class="box sunrise">
-                <p>Salida del sol</p>
-                <span id="sunriseHour">06:34</span>
-                <img src="./weather-icons/horizont_morning_sun_sunrise_weather_icon.svg" alt="">
-            </div>
-            <div class="box sunset">
-                <p>Atardecer</p>
-                <span id="sunsetHour">20:43</span>
-                <img src="./weather-icons/evening_horizon_sun_sundown_sunset_icon.svg" alt="">
-            </div>
-        </div>
-
-        <div class="weather-others">
-            <div class="box weather-uv">
-                <img src="./weather-icons/light_radiation_rays_sun_ultraviolet_icon.svg" alt="">
-                <p>Indice UV</p>
-                <span id="UVIndex">Bajo</span>
-            </div>
-            <div class="box weather-humidity">
-                <img src="./weather-icons/drop_high_humidity_percentage_precipitation_icon.svg" alt="">
-                <p>Humedad</p>
-                <span id="humidity">23%</span>
-            </div>
-            <div class="box weather-wind">
-                <img src="./weather-icons/breeze_fast_speed_weather_wind_icon.svg" alt="">
-                <p>Viento</p>
-                <span id="windSpeed">23 Km/h</span>
-            </div>
-        </div>
 
     </div>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </body>
 </html>
