@@ -1,6 +1,6 @@
-
+// import apiKey from "./key"
 let weather = {
-    apiKey: "323f7ad5e3903c6aa4a1b7aad45b65bf",
+    apiKey: "Your api key goes here",
     fetchWeather: function (city) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid="+this.apiKey+"&lang=es")
         .then((response) => {
