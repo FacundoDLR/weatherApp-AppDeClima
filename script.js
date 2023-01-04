@@ -1,4 +1,4 @@
-// import apiKey from "./key"
+
 let weather = {
     apiKey: "Your api key goes here",
     fetchWeather: function (city) {
